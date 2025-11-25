@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Projects in GenAI, Data, and Engineering." />
+  <meta property="og:title" content="Your Name — Portfolio" />
+  <meta property="og:description" content="Projects in GenAI, Data, and Engineering." />
+  <meta property="og:image" content="https://YOUR_USERNAME.github.io/assets/og-image.png" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">Your Name</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.getElementById('site-nav').classList.toggle('open')">☰</button>
+    <nav id="site-nav" class="site-nav">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#writing">Writing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Hi, I’m <span class="accent">Your Name</span>.</h1>
+      <p class="tagline">I build practical AI & data products — GenAI, RAG, LLMOps, and analytics.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="mailto:you@example.com">Email me</a>
+        <a class="btn" href="#projects">See projects</a>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Automated JD Analyzer (GenAI)</h3>
+          <p>LLM-powered analysis of US job descriptions. Strict JSON outputs with schema validation and charts.</p>
+          <ul class="meta"><li>Python</li><li>OpenAI</li><li>JSON Schema</li></ul>
+          <div class="actions">
+            <a class="btn small" href="https://github.com/YOUR_USERNAME/jd-analyzer-genai" target="_blank">Repo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Tech Hub Premium (Visualization)</h3>
+          <p>Single-chart story: Top-5 city premium vs US average (Software Engineer). Bootstrap CIs & COL-adjusted view.</p>
+          <ul class="meta"><li>Matplotlib</li><li>Stats</li><li>Storytelling</li></ul>
+          <div class="actions">
+            <a class="btn small" href="artifacts/city_premium_dumbbell_ci.png" target="_blank">Hero Chart</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="item"><div class="when">2024–2025</div><div class="what"><strong>GenAI / Data — Projects</strong> • Python, LLM APIs, RAG, visualization</div></div>
+        <div class="item"><div class="when">Earlier</div><div class="what"><strong>Software / Analytics</strong> • APIs, dashboards, CI/CD</div></div>
+      </div>
+    </section>
+
+    <section id="writing" class="section">
+      <h2>Writing</h2>
+      <ul class="links">
+        <li><a href="#" target="_blank">Designing schema-bound prompts for JSON outputs</a></li>
+        <li><a href="#" target="_blank">One-chart stories: executive visualization patterns</a></li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Reach me at <a href="mailto:you@example.com">you@example.com</a> or find me on:</p>
+      <p class="social">
+        <a href="https://github.com/YOUR_USERNAME" target="_blank" aria-label="GitHub">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" aria-label="LinkedIn">LinkedIn</a> ·
+        <a href="https://twitter.com/YOUR_HANDLE" target="_blank" aria-label="Twitter">Twitter</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Your Name • Built with pure HTML/CSS/JS • Hosted on GitHub Pages</p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
