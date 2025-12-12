@@ -1,35 +1,163 @@
 :root{
-  --bg:#0b0f14; --card:#121821; --fg:#e8eef6; --muted:#9fb2c7; --accent:#7cc5ff; --border:#223044;
+  --navy-900:#0b1220; --navy-800:#0f1a2e; --navy-700:#14223c;
+  --accent:#7cc5ff; --cream:#f3f6fb; --muted:#a9b7cc;
+  --card:#111a2a; --border:#24324a;
 }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);
-  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
-a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-h1,h2,h3{line-height:1.2;margin:0 0 .5rem}
-.section{padding:3rem 1rem;max-width:1000px;margin:0 auto}
-.site-header{position:sticky;top:0;background:rgba(11,15,20,.8);backdrop-filter:blur(6px);
-  border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem}
-.brand{font-weight:700;letter-spacing:.2px}
-.site-nav a{margin-left:1rem;color:var(--fg)}
-.nav-toggle{display:none;background:none;border:1px solid var(--border);color:var(--fg);padding:.25rem .5rem;border-radius:.5rem}
-.hero{padding:5rem 1rem 2rem;max-width:1000px;margin:0 auto}
-.tagline{color:var(--muted);margin:.5rem 0 1rem}
-.cta-row{display:flex;gap:.75rem;flex-wrap:wrap}
-.btn{display:inline-block;padding:.6rem 1rem;border:1px solid var(--border);border-radius:.6rem;color:var(--fg)}
-.btn.primary{background:var(--accent);color:#001525;border-color:transparent}
-.btn.small{padding:.4rem .7rem;font-size:.9rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1rem}
-.card{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1rem}
-.card .meta{display:flex;gap:.5rem;list-style:none;padding:0;margin:.75rem 0 0;color:var(--muted);flex-wrap:wrap}
-.timeline .item{display:grid;grid-template-columns:110px 1fr;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border)}
-.timeline .when{color:var(--muted)}
-.links{list-style:none;padding:0} .links li{padding:.4rem 0;border-bottom:1px solid var(--border)}
-.social a{color:var(--fg)}
-.site-footer{border-top:1px solid var(--border);padding:1rem;text-align:center;color:var(--muted)}
-.accent{color:var(--accent)}
-@media (max-width:720px){
-  .site-nav{display:none;position:absolute;right:1rem;top:56px;background:var(--card);border:1px solid var(--border);border-radius:.8rem;padding:.5rem}
-  .site-nav.open{display:block}
-  .site-nav a{display:block;padding:.4rem .6rem}
-  .nav-toggle{display:inline-block}
+html,body{scroll-behavior:smooth}
+body{
+  background: radial-gradient(1100px 700px at 20% -10%, var(--navy-700), var(--navy-900)) fixed;
+  color: var(--cream);
+  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+}
+
+/* Sections fill viewport and center content */
+.section-viewport{
+  min-height: 100vh;
+  display: block;
+  padding: 4rem 1rem;
+}
+.container-narrow{ max-width: 900px; margin: 0 auto; }
+
+.bg-translucent{ background: rgba(9,14,25,.7); backdrop-filter: blur(6px) }
+
+.text-cream{ color: var(--cream) }
+.text-accent{ color: var(--accent) }
+
+/* Buttons */
+.btn-accent{
+  --bs-btn-color:#00131d; --bs-btn-bg:var(--accent); --bs-btn-border-color:var(--accent);
+  --bs-btn-hover-bg:#9ad3ff; --bs-btn-hover-border-color:#9ad3ff; --bs-btn-active-bg:#bfe5ff;
+}
+.btn-outline-cream{
+  --bs-btn-color:var(--cream); --bs-btn-border-color:var(--border);
+  --bs-btn-hover-bg:#12203a; --bs-btn-hover-border-color:var(--accent);
+}
+
+/* Avatar */
+.avatar{
+  width:132px;height:132px;object-fit:cover;border-radius:50%;
+  border:3px solid rgba(124,197,255,.35); box-shadow:0 0 0 6px rgba(124,197,255,.12);
+}
+
+/* Cards & glass look */
+.card{ background: var(--card); border-color: var(--border); color: var(--cream) }
+.card-glass{
+  background: linear-gradient(180deg, rgba(17,26,42,.85), rgba(17,26,42,.7));
+  border: 1px solid var(--border); border-radius: 1rem;
+  box-shadow: 0 0 0 1px rgba(124,197,255,.06), 0 .6rem 2rem rgba(0,0,0,.35);
+}
+.bg-input{ background: #0e1727; border-color: var(--border); color: var(--cream); }
+
+/* Stack chips */
+.stack-grid{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:.8rem; max-width:900px; margin:0 auto;
+}
+.chip{
+  display:flex; align-items:center; justify-content:center; gap:.5rem;
+  padding:.6rem .9rem; border:1px solid var(--border); border-radius:.8rem;
+  background: rgba(17,26,42,.75);
+  transition: transform .2s ease, border-color .2s ease;
+}
+.chip:hover{ transform: translateY(-2px); border-color: var(--accent) }
+.chip i{ font-size:1.2rem }
+
+/* Badges */
+.badge-row .badge{ margin:.15rem }
+.badge.bg-outline{ color: var(--cream); border:1px solid var(--border); background:transparent; }
+.inline-badge{ height:22px; vertical-align:middle; margin-left:.35rem }
+
+/* Carousel + shadow */
+.carousel .card{ border-radius:1rem }
+.shadow-soft{ box-shadow: 0 16px 44px rgba(0,0,0,.35) }
+
+/* Story connector text */
+.story{ color: var(--muted); font-style: italic }
+
+/* Timeline (for Experience collapse) */
+.list-timeline{ position:relative; padding-left:.5rem; }
+.list-timeline::before{
+  content:""; position:absolute; left:10px; top:0; bottom:0; width:2px; background:var(--border);
+}
+.tl-item{ position:relative; padding-left:2rem; margin-bottom:1rem; }
+.tl-item::before{
+  content:""; position:absolute; left:3px; top:.4rem; width:14px; height:14px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 0 3px rgba(124,197,255,.2);
+}
+.tl-time{ color: var(--muted); width:120px; display:inline-block; }
+.tl-body{ display:inline }
+
+/* Achievements grid */
+.achv-grid{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1rem; max-width:1000px; margin:0 auto;
+}
+
+/* Reveal animation */
+.fade-in-up{ opacity:0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease }
+.fade-in-up.in{ opacity:1; transform: none }
+
+/* Footer */
+footer{ color: var(--muted) }
+
+/* Optional: subtle style for navbar "badge" links */
+.badge-link{ display:flex; align-items:center; gap:.25rem; }
+
+/* Remove dividing lines between sections (keep navbar/footer as-is) */
+.section-viewport { border-top: 0 !important; border-bottom: 0 !important; }
+
+/* Experience carousel: tighter spacing + consistent height */
+#expCollapse .carousel-item { padding: .25rem 0; }
+#expCollapse .card .badge { margin: .08rem .12rem; font-weight: 500; }
+#expCollapse .card .card-body { display: flex; flex-direction: column; }
+#expCollapse .badge-row { margin-top: auto; }
+
+/* --- Experience Carousel: position & color fixes --- */
+#expCollapse { overflow: visible; }               /* allow controls to sit outside */
+#expCollapse #expCarousel { 
+  overflow: visible; 
+  padding-bottom: 2.5rem;                         /* room for indicators */
+}
+
+/* Indicators (dots) — white and slightly below the carousel */
+#expCollapse .carousel-indicators {
+  bottom: -18px;                                  /* push dots below cards */
+  gap: 8px;
+}
+#expCollapse .carousel-indicators [data-bs-target]{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;                         /* white dots */
+  opacity: .35;
+}
+#expCollapse .carousel-indicators .active { 
+  opacity: 1; 
+}
+
+/* Arrows — move outside the carousel and make them white-on-glass */
+#expCollapse .carousel-control-prev,
+#expCollapse .carousel-control-next {
+  width: 3rem;
+  height: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,.08);              /* soft glass button */
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+#expCollapse .carousel-control-prev { left: -2.75rem; }   /* sit outside on left */
+#expCollapse .carousel-control-next { right: -2.75rem; }  /* sit outside on right */
+
+/* Make the chevrons white regardless of theme */
+#expCollapse .carousel-control-prev-icon,
+#expCollapse .carousel-control-next-icon {
+  filter: invert(1) brightness(2);
+}
+
+/* On smaller screens, keep arrows closer so they don’t get clipped */
+@media (max-width: 992px){
+  #expCollapse .carousel-control-prev { left: -1.25rem; }
+  #expCollapse .carousel-control-next { right: -1.25rem; }
 }
