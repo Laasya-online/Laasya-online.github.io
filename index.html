@@ -1,93 +1,602 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Portfolio</title>
-  <meta name="description" content="Projects in GenAI, Data, and Engineering." />
-  <meta property="og:title" content="Your Name — Portfolio" />
-  <meta property="og:description" content="Projects in GenAI, Data, and Engineering." />
-  <meta property="og:image" content="https://YOUR_USERNAME.github.io/assets/og-image.png" />
+  <title>Laasya Vajjala — Portfolio</title>
+  <meta name="description" content="GenAI, Data, Security-conscious engineering with polished delivery." />
+  <meta property="og:title" content="Laasya Vajjala — Portfolio" />
+  <meta property="og:description" content="GenAI, Data, Security-conscious engineering with polished delivery." />
+  
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Devicon (tech logos) -->
+  <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet">
+
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="/">Your Name</a>
-    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.getElementById('site-nav').classList.toggle('open')">☰</button>
-    <nav id="site-nav" class="site-nav">
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#writing">Writing</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+  <!-- NAV (center-aligned, includes Education & Experience links that open collapses) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-translucent sticky-top border-bottom border-1 border-primary-subtle">
+    <div class="container justify-content-center">
+      <a class="navbar-brand fw-bold me-4" href="/">Laasya Vajjala</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topnav" aria-controls="topnav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="topnav" class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav text-center align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#me">Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#open">Open to Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stack">Techstack</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#art">Art</a></li>
+          <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li><!-- NEW -->
+          <li class="nav-item"><a class="nav-link" href="#contact">Reach out</a></li>
+ 
+          <!-- Toolbar links that expand hidden sections -->
+          <li class="nav-item ms-3">
+            <a class="nav-link badge-link" href="#education" data-open-target="#eduCollapse">
+              <i class="bi bi-mortarboard me-1"></i>Education
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link badge-link" href="#experience" data-open-target="#expCollapse">
+              <i class="bi bi-briefcase me-1"></i>Experience
+            </a>
+          </li>
+
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-accent" target="_blank" href="https://github.com/Laasya-online">
+              <i class="bi bi-github me-1"></i> GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 1: Myself -->
+  <header id="me" class="section-viewport text-center border-bottom border-primary-subtle d-flex align-items-center">
+    <div class="container-narrow fade-in-up">
+      <img class="avatar mb-3" src="Laasya.jpeg" alt="Laasya portrait" />
+      <h1 class="display-6 fw-semibold">Hi, I’m <span class="text-accent">Laasya</span>.</h1>
+      <p class="lead text-cream mt-2 mb-3">
+      
+      </p>
+      <p class="text-muted small mb-4"><i class="bi bi-geo-alt me-1"></i> Pullman, WA · MS in Computer Science</p>
+
+      <p class="text-cream mx-auto" style="max-width:720px">
+        I am from India, I hold a Master of Science degree in Computer Science from Washington State University. 
+        Currently working as an AI-focused Research Technologist in the Biological Systems Engineering Department at WSU, 
+        under Dr. Shulin Chen on modeling and Python-based analytics. 
+         
+      </p>
+      
+      <p class="text-cream mx-auto" style="max-width:720px"></p>
+        I am actively exploring new career opportunities in AI, data analytics, and Python-based development while continuing to expand 
+        my skills and knowledge. I am a lifelong learner, driven by curiosity, continuous growth, and the desire to build solutions that matter. 
+        Beyond my technical work, I enjoy painting and contributing to community activities, carrying forward my passion for creativity, 
+        collaboration, and meaningful impact.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+        <a class="btn btn-accent" href="mailto:laasyavajjala04@gmail.com"><i class="bi bi-envelope me-1"></i>Email</a><!-- TODO -->
+        <a class="btn btn-outline-cream" target="_blank" href="https://www.linkedin.com/in/laasya-vajjala-884b43172/"><i class="bi bi-linkedin me-1"></i>LinkedIn</a><!-- TODO -->
+        <a class="btn btn-outline-cream" target="_blank" href="https://github.com/Laasya-online"><i class="bi bi-github me-1"></i>GitHub</a>
+        <a class="btn btn-outline-cream" target="_blank" href="https://www.instagram.com/laach_art_zone/"><i class="bi bi-instagram me-1"></i>Instagram</a><!-- TODO -->
+        <a class="btn btn-outline-cream" target="_blank" href="https://www.facebook.com/laasya.vajjala/"><i class="bi bi-facebook me-1"></i>Facebook</a><!-- TODO -->
+      </div>
+
+      <!-- Hidden Education -->
+      <div class="mt-4">
+        <span id="education"></span>
+        <button class="btn btn-outline-cream" type="button" data-bs-toggle="collapse" data-bs-target="#eduCollapse" aria-expanded="false">
+          <i class="bi bi-mortarboard me-1"></i> Education
+        </button>
+        <div id="eduCollapse" class="collapse mt-3">
+          <div class="card card-glass mx-auto" style="max-width:720px">
+            <div class="card-body text-cream">
+              <strong>M.S. Computer Science</strong> <br/>
+              Washington State University | 2023 - 2025 | Pullman, WA, USA
+            </div>
+            <div class="card-body text-cream">
+              <strong>B.Tech. Computer Science</strong> <br/>
+              Holy Mary Institute of Technology and Science | 2018 - 2022 | Hyderabad, TS, India
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="story mt-4"> </p>
+      <a class="btn btn-accent mt-2" href="#open">Next: Open to work</a>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Hi, I’m <span class="accent">Your Name</span>.</h1>
-      <p class="tagline">I build practical AI & data products — GenAI, RAG, LLMOps, and analytics.</p>
-      <div class="cta-row">
-        <a class="btn primary" href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="mailto:you@example.com">Email me</a>
-        <a class="btn" href="#projects">See projects</a>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <h2>Featured Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Automated JD Analyzer (GenAI)</h3>
-          <p>LLM-powered analysis of US job descriptions. Strict JSON outputs with schema validation and charts.</p>
-          <ul class="meta"><li>Python</li><li>OpenAI</li><li>JSON Schema</li></ul>
-          <div class="actions">
-            <a class="btn small" href="https://github.com/YOUR_USERNAME/jd-analyzer-genai" target="_blank">Repo</a>
+  <!-- SECTION 2: Open to work  -->
+  <section id="open" class="section-viewport text-center border-top border-bottom border-primary-subtle d-flex align-items-center">
+    <div class="container-narrow fade-in-up">
+      <h2 class="h3 mb-4">Open to Work</h2>
+      <div class="row g-3 justify-content-center">
+        <div class="col-md-4">
+          <div class="card card-glass h-100">
+            <div class="card-body">
+              <i class="bi bi-robot fs-3 text-accent"></i>
+              <h3 class="h6 mt-2">AI Developer</h3>
+              <p class="text-cream small mb-0">LLMs, RAG, agents, JSON contracts, guardrails, evals.</p>
+            </div>
           </div>
-        </article>
-
-        <article class="card">
-          <h3>Tech Hub Premium (Visualization)</h3>
-          <p>Single-chart story: Top-5 city premium vs US average (Software Engineer). Bootstrap CIs & COL-adjusted view.</p>
-          <ul class="meta"><li>Matplotlib</li><li>Stats</li><li>Storytelling</li></ul>
-          <div class="actions">
-            <a class="btn small" href="artifacts/city_premium_dumbbell_ci.png" target="_blank">Hero Chart</a>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-glass h-100">
+            <div class="card-body">
+              <i class="bi bi-graph-up-arrow fs-3 text-accent"></i>
+              <h3 class="h6 mt-2">Data / Analytics Eng</h3>
+              <p class="text-cream small mb-0">Pipelines, viz stories, CI artifacts, basic MLOps.</p>
+            </div>
           </div>
-        </article>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-glass h-100">
+            <div class="card-body">
+              <i class="bi bi-shield-lock fs-3 text-accent"></i>
+              <h3 class="h6 mt-2">Security-minded SWE</h3>
+              <p class="text-cream small mb-0">SBOMs, Trivy scans, Dependabot, policy in CI.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
 
-    <section id="experience" class="section">
-      <h2>Experience</h2>
-      <div class="timeline">
-        <div class="item"><div class="when">2024–2025</div><div class="what"><strong>GenAI / Data — Projects</strong> • Python, LLM APIs, RAG, visualization</div></div>
-        <div class="item"><div class="when">Earlier</div><div class="what"><strong>Software / Analytics</strong> • APIs, dashboards, CI/CD</div></div>
+      <!-- Hidden Experience -->
+      <div class="mt-4">
+        <span id="experience"></span>
+        <button class="btn btn-outline-cream" type="button" data-bs-toggle="collapse" data-bs-target="#expCollapse" aria-expanded="false">
+          <i class="bi bi-briefcase me-1"></i> Experience
+        </button>
+        <div id="expCollapse" class="collapse mt-3">
+
+  <div id="expCarousel" class="carousel slide" data-bs-touch="true" data-bs-interval="8000" data-bs-pause="hover">
+    
+    <!-- Dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#expCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#expCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+      <!-- SLIDE 1: 3 cards -->
+      <div class="carousel-item active">
+        <div class="row g-3 justify-content-center">
+          
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-glass h-100">
+              <div class="card-body text-start">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-cpu fs-3 text-accent me-2"></i>
+                  <div>
+                    <h3 class="h6 mb-0">AI Research Technologist</h3>
+                    <div class="small text-muted">Washington State University • 2024 – Present</div>
+                  </div>
+                </div>
+                <p class="text-cream small mb-2">
+                  Desktop AI app to estimate methane emissions for covered dairy lagoons—ML + biological constraints for farmer-ready insights.
+                </p>
+                <div class="badge-row">
+                  <span class="badge bg-outline">Python</span>
+                  <span class="badge bg-outline">ML</span>
+                  <span class="badge bg-outline">Data Viz</span>
+                  <span class="badge bg-outline">Desktop App</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-glass h-100">
+              <div class="card-body text-start">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-window-sidebar fs-3 text-accent me-2"></i>
+                  <div>
+                    <h3 class="h6 mb-0">Junior Web Developer</h3>
+                    <div class="small text-muted">Washington State University • 2024 – 2025</div>
+                  </div>
+                </div>
+                <p class="text-cream small mb-2">
+                  Restructured frontend, tightened internal linking, and optimized meta tags/URLs to improve UX and on-page SEO.
+                </p>
+                <div class="badge-row">
+                  <span class="badge bg-outline">HTML/CSS</span>
+                  <span class="badge bg-outline">SEO</span>
+                  <span class="badge bg-outline">Accessibility</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-glass h-100">
+              <div class="card-body text-start">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-journal-code fs-3 text-accent me-2"></i>
+                  <div>
+                    <h3 class="h6 mb-0">Instructional Designer</h3>
+                    <div class="small text-muted">UniAthena • 2023</div>
+                  </div>
+                </div>
+                <p class="text-cream small mb-2">
+                  Produced AI-driven modules in Cybersecurity, AI, and ML—hands-on content, assessments, and modular delivery.
+                </p>
+                <div class="badge-row">
+                  <span class="badge bg-outline">AI/ML</span>
+                  <span class="badge bg-outline">Curriculum</span>
+                  <span class="badge bg-outline">Content Dev</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </section>
 
-    <section id="writing" class="section">
-      <h2>Writing</h2>
-      <ul class="links">
-        <li><a href="#" target="_blank">Designing schema-bound prompts for JSON outputs</a></li>
-        <li><a href="#" target="_blank">One-chart stories: executive visualization patterns</a></li>
-      </ul>
-    </section>
+      <!-- SLIDE 2: 2 cards -->
+      <div class="carousel-item">
+        <div class="row g-3 justify-content-center">
+          
+          <!-- Card 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-glass h-100">
+              <div class="card-body text-start">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-airplane fs-3 text-accent me-2"></i>
+                  <div>
+                    <h3 class="h6 mb-0">Software Intern</h3>
+                    <div class="small text-muted">Wipro • 2022</div>
+                  </div>
+                </div>
+                <p class="text-cream small mb-2">
+                  Airline booking app: auth, flight search, seat selection, booking & cancellations with clean flows.
+                </p>
+                <div class="badge-row">
+                  <span class="badge bg-outline">Frontend</span>
+                  <span class="badge bg-outline">APIs</span>
+                  <span class="badge bg-outline">App Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Reach me at <a href="mailto:you@example.com">you@example.com</a> or find me on:</p>
-      <p class="social">
-        <a href="https://github.com/YOUR_USERNAME" target="_blank" aria-label="GitHub">GitHub</a> ·
-        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" aria-label="LinkedIn">LinkedIn</a> ·
-        <a href="https://twitter.com/YOUR_HANDLE" target="_blank" aria-label="Twitter">Twitter</a>
-      </p>
-    </section>
-  </main>
+          <!-- Card 5 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-glass h-100">
+              <div class="card-body text-start">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-people fs-3 text-accent me-2"></i>
+                  <div>
+                    <h3 class="h6 mb-0">Head of Business Development</h3>
+                    <div class="small text-muted">Think N Blink • 2020 – 2021</div>
+                  </div>
+                </div>
+                <p class="text-cream small mb-2">
+                  Led growth strategy, pipeline, and client engagement—coordinated delivery teams and shaped partnerships.
+                </p>
+                <div class="badge-row">
+                  <span class="badge bg-outline">Strategy</span>
+                  <span class="badge bg-outline">Stakeholders</span>
+                  <span class="badge bg-outline">Team Lead</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Your Name • Built with pure HTML/CSS/JS • Hosted on GitHub Pages</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Prev/Next -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#expCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#expCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+
+  <div class="text-center small text-muted mt-2">Auto-rotates every 5.5s (hover to pause). Swipe on mobile.</div>
+
+</div>
+
+      </div>
+
+      <p class="story mt-4">My skillsets that power these roles ↓</p>
+      <a class="btn btn-accent mt-2" href="#stack">Next: Techstack</a>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Techstack -->
+  <section id="stack" class="section-viewport text-center border-top border-bottom border-primary-subtle d-flex align-items-center">
+    <div class="container-narrow fade-in-up">
+      <h2 class="h3 mb-4">Techstack</h2>
+      <div class="stack-grid">
+        <div class="chip"><i class="devicon-python-plain"></i> Python</div>
+        <div class="chip"><i class="devicon-pandas-original"></i> pandas</div>
+        <div class="chip"><i class="devicon-numpy-original"></i> numpy</div>
+        <div class="chip"><i class="devicon-matplotlib-plain"></i> matplotlib</div>
+        <div class="chip"><i class="devicon-nodejs-plain"></i> Node.js</div>
+        <div class="chip"><i class="devicon-npm-original-wordmark"></i> npm</div>
+        <div class="chip"><i class="devicon-docker-plain"></i> Docker</div>
+        <div class="chip"><i class="devicon-github-original"></i> GitHub Actions</div>
+        <div class="chip"><i class="bi bi-braces-asterisk"></i> JSON Schema</div>
+        <div class="chip"><i class="bi bi-braces-asterisk"></i> LangChain</div>
+        <div class="chip"><i class="bi bi-braces-asterisk"></i> SQL</div>
+        <div class="chip"><i class="devicon-azure-plain"></i> OpenAI</div>
+        <div class="chip"><i class="devicon-googlecloud-plain"></i> GCP</div>
+      </div>
+      <p class="story mt-4">Here are projects that apply this stack ↓</p>
+      <a class="btn btn-accent mt-2" href="#projects">Next: Projects</a>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Projects -->
+  <section id="projects" class="section-viewport text-center border-top border-bottom border-primary-subtle d-flex align-items-center">
+    <div class="container fade-in-up">
+      <h2 class="h3 mb-4">Projects</h2>
+      <div id="projCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="card card-glass mx-auto" style="max-width:900px">
+              <div class="card-body">
+                <h3 class="h5">Automated JD Analyzer (GenAI)</h3>
+                <p class="text-cream">LLM analysis of job descriptions → strict JSON (schema-validated) → charts. CI badge and JSON validate Action.</p>
+                <div class="badge-row">
+                  <span class="badge bg-outline">Python</span>
+                  <span class="badge bg-outline">OpenAI</span>
+                  <span class="badge bg-outline">JSON Schema</span>
+                  <span class="badge bg-outline">Actions</span>
+                </div>
+                <div class="mt-3">
+                  <a class="btn btn-outline-cream btn-sm" target="_blank" href="https://github.com/Laasya-online/JD-analyzer-genai">Repo</a>
+                  <img class="inline-badge" src="https://github.com/Laasya-online/JD-analyzer-genai/actions/workflows/validate-json.yml/badge.svg" alt="Validate badge">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card card-glass mx-auto" style="max-width:900px">
+              <div class="card-body">
+                <h3 class="h5">Tech Hub Premium (Visualization)</h3>
+                <p class="text-cream">Single-chart story: Top-5 city premium vs US average. Containerized + CI artifacts + release.</p>
+                <div class="badge-row">
+                  <span class="badge bg-outline">Matplotlib</span>
+                  <span class="badge bg-outline">Docker</span>
+                  <span class="badge bg-outline">CI/CD</span>
+                </div>
+                <div class="mt-3">
+                  <a class="btn btn-outline-cream btn-sm" target="_blank" href="https://github.com/Laasya-online/single-chart-story">Repo</a>
+                  <a class="btn btn-outline-cream btn-sm" target="_blank" href="https://github.com/Laasya-online/single-chart-story/releases">Release</a>
+                  <img class="inline-badge" src="https://github.com/Laasya-online/single-chart-story/actions/workflows/security.yml/badge.svg" alt="Security">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card card-glass mx-auto" style="max-width:900px">
+              <div class="card-body">
+                <h3 class="h5">json-validate (GitHub Action)</h3>
+                <p class="text-cream">Reusable Action: validate JSON against a Schema. Plug-and-play for CI. Used in JD Analyzer.</p>
+                <div class="badge-row">
+                  <span class="badge bg-outline">Python</span>
+                  <span class="badge bg-outline">GitHub Actions</span>
+                </div>
+                <div class="mt-3">
+                  <a class="btn btn-outline-cream btn-sm" target="_blank" href="https://github.com/Laasya-online/json-validate">Repo</a>
+                  <span class="small text-muted ms-2">Tag: <code>@v1</code></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card card-glass mx-auto" style="max-width:900px">
+              <div class="card-body">
+                <h3 class="h5">json-schema-guard (npm)</h3>
+                <p class="text-cream">AJV-based CLI to validate JSON against Schema. Useful for CI gates and local checks.</p>
+                <div class="badge-row">
+                  <span class="badge bg-outline">Node.js</span>
+                  <span class="badge bg-outline">Ajv</span>
+                  <span class="badge bg-outline">npm</span>
+                </div>
+                <div class="mt-3">
+                  <a class="btn btn-outline-cream btn-sm" target="_blank" href="https://github.com/Laasya-online/json-schema-guard">Repo</a>
+                  <a class="btn btn-outline-cream btn-sm" target="_blank" href="https://www.npmjs.com/package/json-schema-guard">npm</a>
+                  <img class="inline-badge" src="https://img.shields.io/npm/v/json-schema-guard?logo=npm" alt="npm">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#projCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#projCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <p class="story mt-4">I’m also an art enthusiast. ↓</p>
+      <a class="btn btn-accent mt-2" href="#art">Next: Art</a>
+    </div>
+  </section>
+
+  <!-- SECTION 5: Art -->
+  <section id="art" class="section-viewport text-center border-top border-bottom border-primary-subtle d-flex align-items-center">
+    <div class="container-narrow fade-in-up">
+      <h2 class="h3 mb-3">Artworks</h2>
+      <p class="text-cream mb-4">A few pieces from my pencil shading & painting work.</p>
+
+      <div id="artCarousel" class="carousel slide" data-bs-ride="carousel" style="max-width:880px;margin:0 auto">
+        <div class="carousel-inner rounded-4 border border-primary-subtle shadow-soft">
+          <div class="carousel-item active"><img class="d-block w-100" src="dragons_canvas.jpg" alt="Artwork 1"></div>
+          <div class="carousel-item"><img class="d-block w-100" src="elephant_art.jpg" alt="Artwork 2"></div>
+          <div class="carousel-item"><img class="d-block w-100" src="elephants_group.jpg" alt="Artwork 3"></div>
+          <div class="carousel-item"><img class="d-block w-100" src="squirrel.jpg" alt="Artwork 3"></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#artCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#artCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div>
+      <p class="story mt-4"> Highlights & credentials ↓ </p>
+      <a class="btn btn-accent mt-2" href="#achievements">Next: Achievements</a>
+    </div>
+  </section>
+
+  <!-- SECTION 6: Achievements (NEW) -->
+  <section id="achievements" class="section-viewport text-center border-top border-bottom border-primary-subtle d-flex align-items-center">
+    <div class="container fade-in-up">
+      <h2 class="h3 mb-4">Achievements</h2>
+
+      <div class="achv-grid">
+        <!-- Block: GitHub & OSS -->
+        <div class="card card-glass">
+          <div class="card-body">
+            <h3 class="h6 mb-2"><i class="bi bi-trophy me-1 text-accent"></i> GitHub & Open Source</h3>
+            <ul class="list-unstyled text-cream small mb-3 text-start">
+              <li>• Reusable Action: <strong>json-validate@v1</strong> (schema checks in CI)</li>
+              <li>• Published CLI: <strong>json-schema-guard</strong> (AJV-based validator)</li>
+              <li>• Security CI: Dependabot + Trivy SBOM scans</li>
+            </ul>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+              <a class="btn btn-outline-cream btn-sm" target="_blank" href="https://github.com/Laasya-online?tab=achievements">
+                <i class="bi bi-github"></i> GitHub Achievements
+              </a>
+              <img class="inline-badge" src="https://img.shields.io/github/actions/workflow/status/Laasya-online/JD-analyzer-genai/validate-json.yml?label=JD%20Analyzer%20CI" alt="JD Analyzer CI">
+              <img class="inline-badge" src="https://img.shields.io/github/actions/workflow/status/Laasya-online/single-chart-story/security.yml?label=Security%20scan" alt="Security scan">
+            </div>
+          </div>
+        </div>
+
+        <!-- Block: Awards / Leadership -->
+        <div class="card card-glass">
+          <div class="card-body">
+            <h3 class="h6 mb-2"><i class="bi bi-stars me-1 text-accent"></i>Leadership</h3>
+            <ul class="list-unstyled text-cream small mb-0 text-start">
+              <li>• ISA (Indian Students Association) leadership & events</li>
+              <li>• Poster / symposium participation (WSU)</li>
+              <li>• Community initiatives / mentorship</li>
+            </ul>
+          </div>
+        </div>
+
+
+    <div>    
+      <p class="story mt-4">Let's Connect ↓</p>
+      <a class="btn btn-accent mt-2" href="#contact">Next: Reach out</a>
+    </div>
+  </section>
+
+  <!-- SECTION 7: Contact -->
+  <section id="contact" class="section-viewport text-center border-top border-primary-subtle d-flex align-items-center">
+    <div class="container-narrow fade-in-up">
+      <h2 class="h3 mb-3">Reach out</h2>
+      <p class="text-cream mb-4">Happy to chat about GenAI, data products, security, or collaborations.</p>
+
+      <div class="card card-glass mx-auto" style="max-width:720px">
+        <div class="card-body">
+          <form id="contactForm" class="row g-3 justify-content-center">
+            <div class="col-md-5"><input class="form-control bg-input" type="text" id="name" placeholder="Your name" required></div>
+            <div class="col-md-5"><input class="form-control bg-input" type="email" id="email" placeholder="Your email" required></div>
+            <div class="col-10"><textarea class="form-control bg-input" id="message" rows="4" placeholder="Message" required></textarea></div>
+            <div class="col-10"><button class="btn btn-accent" type="submit"><i class="bi bi-send me-1"></i> Send</button></div>
+          </form>
+          <div class="small text-muted mt-3">This opens your mail client. Or email <a class="link-cream" href="mailto:laasyavajjala04@gmail.com">laasyavajjala04@gmail.com</a>.</div><!-- TODO -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4 border-top border-primary-subtle text-center text-muted">
+    © <span id="year"></span> Laasya Vajjala • Built with Bootstrap • Hosted on GitHub Pages
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // reveal-on-scroll
+    const io = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold: .12});
+    document.querySelectorAll('.fade-in-up').forEach(el=>io.observe(el));
+
+    // Contact -> mailto
+    document.getElementById('contactForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const from = encodeURIComponent(document.getElementById('email').value.trim());
+      const msg  = encodeURIComponent(document.getElementById('message').value.trim());
+      const to   = "laasyavajjala04@gmail.com"; // TODO
+      const subject = `Portfolio contact from ${name}`;
+      const body = `From: ${name} <${from}>\n\n${msg}`;
+      window.location.href = `mailto:${to}?subject=${subject}&body=${encodeURIComponent(body)}`;
+    });
+
+    // Resume ping (count-only)
+    const RESUME_PING_URL = "https://script.google.com/macros/s/PASTE_WEB_APP_URL_HERE/exec"; // TODO
+    document.getElementById('resumeBtn').addEventListener('click', ()=>{
+      try{
+        fetch(RESUME_PING_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({ event: 'resume_download', ts: Date.now(), ua: navigator.userAgent, ref: document.referrer })
+        });
+      }catch(e){}
+    });
+
+    // Navbar links that open collapses
+    document.querySelectorAll('a[data-open-target]').forEach(a=>{
+      a.addEventListener('click', ()=>{
+        const sel = a.getAttribute('data-open-target');
+        const el  = document.querySelector(sel);
+        if (!el) return;
+        const inst = bootstrap.Collapse.getOrCreateInstance(el, {toggle:false});
+        inst.show();
+      });
+    });
+
+    // Open collapses if navigated with hash
+    window.addEventListener('load', ()=>{
+      const hash = (location.hash||'').toLowerCase();
+      if (hash === '#education') {
+        const el = document.querySelector('#eduCollapse');
+        if (el) bootstrap.Collapse.getOrCreateInstance(el, {toggle:false}).show();
+      }
+      if (hash === '#experience') {
+        const el = document.querySelector('#expCollapse');
+        if (el) bootstrap.Collapse.getOrCreateInstance(el, {toggle:false}).show();
+      }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
